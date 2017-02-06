@@ -15,7 +15,7 @@ $(function () {
 
 function getRequest(searchTerm) {
     var params = {
-        s: searcTerm,
+        s: searchTerm,
         r: 'json'
     };
     url = 'http://www.omdbapi.com';
