@@ -1,19 +1,23 @@
-$(function () {
+// $(function () {
 
-    $.getJSON('http://www.omdbapi.com/?s=Star%20Wars&r=json', function (data) {
-        showResults(data.Search);
-    });
-});
+//     $.getJSON('http://www.omdbapi.com/?s=Star%20Wars&r=json', function(data){
+//       showResults(data.Search);
+//     });
+// });
 
-$(function () {
+
+
+$(function(){
     $('#search-term').submit(function(event){
         event.preventDefault();
-        var searchTerm = $('#jquery').val();
+        var searchTerm = $('#query').val();
         getRequest(searchTerm);
     });
 });
 
-function getRequest(searchTerm) {
+
+
+function getRequest(searchTerm){
     var params = {
         s: searchTerm,
         r: 'json'
@@ -25,9 +29,11 @@ function getRequest(searchTerm) {
     });
 }
 
-function showResults(results) {
+
+
+function showResults(results){
     var html = "";
-    $.each(results, function (index, value){
+    $.each(results, function(index, value){
         html += '<p>' + value.Title + '<p>';
         console.log(value.Title);
     });
