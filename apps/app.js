@@ -9,7 +9,7 @@
 
 $(function(){
     $('#search-term').submit(function(event){
-        event.preventDefault();
+        // event.preventDefault();
         var searchTerm = $('#query').val();
         getRequest(searchTerm);
     });
