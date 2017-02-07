@@ -9,7 +9,7 @@
 
 $(function(){
     $('#search-term').submit(function(event){
-        // event.preventDefault();
+       event.preventDefault();
         var searchTerm = $('#query').val();
         getRequest(searchTerm);
     });
@@ -24,7 +24,7 @@ function getRequest(searchTerm){
     };
     url = 'http://www.omdbapi.com';
 
-    $.getJson(url, params, function(data){
+    $.getJSON(url, params, function(data){
         showResults(data.Search);
     });
 }
